@@ -35,7 +35,7 @@ public class Produto {
         return preco * quantidade;
     }
 
-    public void adicionarEmEstoque(int qtd) {
+    public void adicionarEstoque(int qtd) {
         quantidade += qtd;
     }
 

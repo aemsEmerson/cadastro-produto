@@ -20,6 +20,25 @@ public class Program {
 
         Produto produto = new Produto(nome, preco, quantidade);
         System.out.println(produto);
+
+        System.out.print("Deseja adicionar produtos ao estoque? (s/n): ");
+        char resp = sc.next().charAt(0);
+        if(resp == 's'){
+            System.out.print("Digite a quantidade: ");
+            quantidade = sc.nextInt();
+            produto.adicionarEstoque(quantidade);
+        }
+        System.out.println(produto);
+
+        System.out.print("Deseja remover produtos do estoque (s/n): ");
+        resp = sc.next().charAt(0);
+        if (resp == 's'){
+            System.out.print("Digite a quantidade: ");
+            quantidade = sc.nextInt();
+            produto.removerEstoque(quantidade);
+        }
+        System.out.println(produto);
+
         sc.close();
     }
 }
